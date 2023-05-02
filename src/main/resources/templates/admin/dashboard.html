@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{admin/index}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Dashboard</title>
+  <link rel="stylesheet" th:href="@{/css/admin/dashboard.css}" />
+  <script th:src="@{/js/admin/pages/dashboard.js}"></script>
+</head>
+<body id="page-top">
+
+<!-- Begin Page Content -->
+<div class="container-fluid" layout:fragment="content">
+
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+  </div>
+
+  <!-- Content Row -->
+  <div class="row" id="content-dashboard">
+    <!--   Blogs       -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <a href="/admin/blogs" class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                Blogs</div>
+              <div id="dashboard-blogs" class="h5 mb-0 font-weight-bold text-gray-800">
+                  <img class="loading-gif" src="/image/loading-gif.gif" th:src="@{/images/loading-gif.gif}" alt="loading">
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-envelope fa-2x text-gray-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!--   Categories          -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <a href="/admin/categories" class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                Categories</div>
+              <div id="dashboard-categories" class="h5 mb-0 font-weight-bold text-gray-800">
+                <img class="loading-gif" src="/image/loading-gif.gif" th:src="@{/images/loading-gif.gif}" alt="loading">
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-gamepad fa-2x text-gray-300"></i>
+              <!--                    <i class="fa-solid fa-gamepad"></i>-->
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Accounts -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <a href="/admin/accounts" class="card border-left-info shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Accounts
+              </div>
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <div id="dashboard-accounts" class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                    <img class="loading-gif" src="/image/loading-gif.gif" th:src="@{/images/loading-gif.gif}" alt="loading">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-users fa-2x text-gray-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <a href="/admin/tags" class="card border-left-warning shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                Tags</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800" id="dashboard-tags">
+                <img class="loading-gif" src="/image/loading-gif.gif" th:src="@{/images/loading-gif.gif}" alt="loading">
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-comments fa-2x text-gray-300"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->
+</body>
+</html>
